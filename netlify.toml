@@ -1,0 +1,10 @@
+[build]
+  publish = "out"
+  command = "npm run build"
+
+[context.production.environment]
+  NODE_VERSION = "16.14.0"
+  GO_VERSION = "1.19"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

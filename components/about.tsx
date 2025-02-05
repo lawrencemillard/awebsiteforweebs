@@ -4,7 +4,6 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion, AnimatePresence } from "framer-motion"
-import { User } from "lucide-react"
 
 const team = [
   {
@@ -34,13 +33,11 @@ export default function About() {
           >
             <Card className="max-w-md overflow-hidden bg-cool-100 dark:bg-cool-800 border-cool-300 dark:border-cool-600">
               <CardHeader className="pb-0">
-                <div className="relative w-32 h-32 mx-auto mb-4">
-                  <div className="absolute inset-0 bg-gradient-to-br from-cool-400 to-cool-600 dark:from-cool-500 dark:to-cool-300 rounded-full" />
-                  <div className="w-full h-full rounded-full border-4 border-cool-200 dark:border-cool-700 flex items-center justify-center bg-cool-100 dark:bg-cool-800">
-                    <User className="w-16 h-16 text-cool-500 dark:text-cool-300" />
-                  </div>
-                </div>
-                <CardTitle className="text-center text-2xl text-cool-700 dark:text-cool-200">{team[0].name}</CardTitle>
+                <CardTitle className="text-center text-2xl text-cool-700 dark:text-cool-200">
+                  <a href={team[0].twitter} target="_blank" rel="noopener noreferrer">
+                    {team[0].name}
+                  </a>
+                </CardTitle>
                 <CardDescription className="text-center text-lg text-cool-600 dark:text-cool-300">
                   {team[0].role}
                 </CardDescription>
@@ -68,14 +65,10 @@ export default function About() {
               >
                 <Card className="overflow-hidden bg-cool-100 dark:bg-cool-800 border-cool-300 dark:border-cool-600">
                   <CardHeader className="pb-0">
-                    <div className="relative w-32 h-32 mx-auto mb-4">
-                      <div className="absolute inset-0 bg-gradient-to-br from-cool-400 to-cool-600 dark:from-cool-500 dark:to-cool-300 rounded-full" />
-                      <div className="w-full h-full rounded-full border-4 border-cool-200 dark:border-cool-700 flex items-center justify-center bg-cool-100 dark:bg-cool-800">
-                        <User className="w-16 h-16 text-cool-500 dark:text-cool-300" />
-                      </div>
-                    </div>
                     <CardTitle className="text-center text-2xl text-cool-700 dark:text-cool-200">
-                      Lawrence/Larsy
+                      <a href="https://x.com/lrsypen" target="_blank" rel="noopener noreferrer">
+                        Lawrence/Larsy
+                      </a>
                     </CardTitle>
                     <CardDescription className="text-center text-lg text-cool-600 dark:text-cool-300">
                       Developer (just a cat :3)
@@ -90,4 +83,3 @@ export default function About() {
     </section>
   )
 }
-
